@@ -1,0 +1,301 @@
+
+                                                                                                                                                                               C PROGRAMMING NOTES
+
+                                                                                                                                                                                   Beginning With C
+
+
+*What is C?
+
+C is a programming language developed at AT & T’s Bell Laboratories of USA in 1972. It was designed and written by a man named Dennis Ritchie. Why C seems so popular is because it is reliable, simple
+and easy to use.
+
+*Getting started with C.
+
+The classical method of learning English is to first learn the alphabets used in the language, then learn to combine these alphabets to form words, which in turn are combined to form sentences and sentences are 
+combined to form paragraphs.
+
+Learning C is similar and easier. Instead of straight-away learning how to write programs, we must first know what alphabets, numbers and special symbols are used in C, then how using them constants, variables
+ and keywords are constructed, and finally how are these combined to form an instruction. A group of instructions would be combined later on to form a program.
+
+
+*Constants , Variables and Keywords
+
+#Constants   :-- A constant is an entity that doesn’t change during the execution of programme.
+
+Types of  C  Constants :
+
+C constants can be divided into two major categories:
+(a)  Primary Constants
+(b) Secondary Constants
+
+
+
+#Rules for Constructing Integer Constants
+
+(a)  An integer constant must have at least one digit.
+(b) It must not have a decimal point.
+(c) It can be either positive or negative.
+(d) If no sign precedes an integer constant it is assumed to be
+     positive.
+(e) No commas or blanks are allowed within an integer constant.
+
+(f)  The allowable range for integer constants is -32768 to 32767.
+
+
+#Rules for Constructing Real Constants
+
+Real constants are often called Floating Point constants.
+
+Following rules must be observed while constructing real constants expressed in fractional form :
+
+(a)A real constant must have at least one digit.
+(b)It must have a decimal point.
+(c)Default sign is positive.
+(d)No commas or blanks are allowed within a real constant
+(e) It could be either positive or negative.
+
+
+#Rules for Constructing Character Constants
+
+ A character constant is a single alphabet, a single digit or a single special symbol enclosed within single inverted commas. Both the inverted commas should point to the left.
+For example, ’A’ is a valid character constant whereas ‘A’ is not.
+
+ The maximum length of a character constant can be 1 character.
+
+
+#Variables :-
+An entity that may vary during program execution is called a variable. A variable is name of a  memory location .These locations can contain integer, real or character constants.
+
+
+#Rules for Constructing Variable Names
+
+(a)A variable name is any combination of 1 to 31 alphabets,
+digits or underscores
+
+(b) The first character in the variable name must be an alphabet or
+underscore.
+
+(c) No commas or blanks are allowed within a variable name.
+
+(d)No special symbol other than an underscore (as in gross_sal)
+can be used in a variable
+
+Ex.: si_int
+m_hra
+pop_e_89
+
+
+# Keywords
+
+Keywords are the words whose meaning has already been explained to the C compiler .
+The keywords cannot be used as variable names. There are 32 keywords in c language.
+
+
+
+*The First C Program
+
+There are following rules that are applicable to all C programs:
+
+(a)  Each instruction in a C program is written as a separate  statement. Therefore a complete C program would comprise of a series of statements.
+
+(b) The statements in a program must appear in the same order in which we wish them to be executed .
+
+(c) Blank spaces may be inserted between two words to improve the readability of the statement. However, no blank spaces are  allowed within a variable, constant or keyword.
+
+(d) All statements are entered in small case letters.
+
+(e) C has no specific rules for the position at which a statement is  to be written. That’s why it is often called a free-form Language.
+
+(f) Every C statement must end with a ;.( statement terminator. )
+
+/* Calculation of simple interest */
+#include<stdio.h>
+#include<conio.h>
+
+void main( )
+{
+int p, n ;
+float r, si ;
+p = 1000 ;
+n = 3 ;
+r = 8.5 ;
+/* formula for simple interest */
+si = p * n * r / 100 ;
+printf ( "%f" , si ) ;
+
+getch();
+}
+
+
+*Compilation and Execution
+
+Once you have written the program you need to type it and instruct the machine to execute it.
+
+ To type your C program you need another program called Editor. Once the program has been typed it needs to be converted to machine language (0s and 1s) before the machine can execute it. 
+To carry out this conversion we need another program called Compiler. 
+
+Compiler vendors provide an Integrated Development Environment (IDE) which consists of an Editor as well as the Compiler.
+ There are several such IDEs available in the market targeted  towards different operating systems.
+
+Note that on compiling the program its machine language equivalent is stored as an EXE file  on the disk.This file is called an executable file.
+ If we copy this file to another machine we can execute it there without being required to
+recompile it. In fact the other machine need not even have a compiler to be able to execute the file.
+
+*Receiving Input
+
+In C programming, scanf()  is one of the commonly used function to take input from the user. The scanf()  function reads formatted input from the standard input such as keyboards.
+
+*   C Instructions :--
+
+There are basically three types of instructions in C:
+(a)Type Declaration Instruction
+(b)Arithmetic Instruction
+(c)Control Instruction
+
+The purpose of each of these instructions is given below:
+
+Type declaration instruction - To declare the type of variables
+                                                           used in a  program.
+Arithmetic instruction - To perform arithmetic operations between   
+                                               constants  and variables.
+Control instruction - To control the sequence of  execution of 
+                                        various statements in a C program.
+ 
+#Type Declaration Instruction
+
+This instruction is used to declare the type of variables being used in the program.
+Ex.: int bas ;
+float rs, grossal ;
+char name, code ;
+ 
+#Arithmetic Instruction
+A C arithmetic instruction consists of a variable name on the left hand side of = and variable names & constants on the right hand side of =.
+Ex.: int ad ;
+float kot, deta, alpha, beta, gamma ;
+ad = 3200 ;
+kot = 0.0056 ;
+deta = alpha * beta / gamma + 3.2 * 2 / 5 ;
+ 
+A C arithmetic statement could be of three types. These are as follows:
+
+(a)Integer mode arithmetic statement - This is an arithmetic statement in which all operands are either integer variables or integer constants.
+
+Ex.: int i, king, issac, noteit ;
+i = i + 1 ;
+king = issac * 234 + noteit - 7689 ;
+
+(b)Real mode arithmetic statement - This is an arithmetic statement in which all operands are either real constants or real variables.
+Ex.: float qbee, antink, si, prin, anoy, roi ;
+qbee = antink + 23.123 / 4.5 * 0.3442 ;
+si = prin * anoy * roi / 100.0 ;
+ 
+(c)Mixed mode arithmetic statement - This is an arithmetic statement in which some of the operands are integers and some of the operands are real.
+
+Ex.: float si, prin, anoy, roi, avg ;
+int a, b, c, num ;
+si = prin * anoy * roi / 100.0 ;
+avg = ( a + b + c + num ) / 4 ;
+
+Note the following points carefully.
+C allows only one variable on left-hand side of =. That is, z = k * l is legal, whereas k * l = z is illegal.
+Modulo operator returns the remainder on dividing one integer with another. Thus the expression 10 / 2  yields 5, whereas, 10 % 2 yields 0.
+The modulus operator (%) cannot be applied on a float. Also note that onusing % the sign of the remainder is always same as the sign of the numerator. Thus –5 % 2 yields –1, whereas, 5 % -2 yields 1.
+An arithmetic instruction is often used for storing characterconstants in character variables.
+b = 'G' ;
+When we do this the ASCII values of the characters are stored
+in the variables. ASCII values are used to represent any character in memory.
+Arithmetic operations can be performed on ints, floats andchars.
+Thus the statements,
+char x, y ;
+int z ;
+x = 'a' ;
+y = 'b' ;
+z = x + y ;are perfectly valid, 
+since the addition is performed on the ASCII values of the characters and not on characters themselves.
+No operator is assumed to be present. It must bewritten explicitly. 
+
+a = c.d.b(xy)                           -- usual arithmetic statement
+b = c * d * b * ( x * y )          --C statement
+
+Unlike other high level languages, there is no operator for
+performing exponentiation operation. Thus following statements are invalid.
+a = 3 ** 2 ;
+b = 3 ^ 2 ;
+If we want to do the exponentiation we can get it done this way:
+#include <math.h>
+main( )
+{
+int a ;
+a = pow ( 3, 2 ) ;
+printf ( “%d”, a ) ;
+}
+*Integer and Float Conversions :--
+
+(a)An arithmetic operation between an integer and integer always yields an integer result.
+(b)An operation between a real and real always  yields a real result.
+ (c)An operation between an integer and real always yields a real
+ 
+
+ 
+*Type Conversion in Assignments :--
+
+It may so happen that the type of the expression and the type of the variable on the left-hand side of the assignment operator may not be same. In such a case the value of the expression is promoted or
+demoted depending on the type of the variable on left-hand side of =.
+
+For example, consider the following assignment statements.
+int i ;
+float b ;
+i = 3.5 ;
+b = 30 ;
+Here in the first assignment statement though the expression’s value is a float (3.5) it cannot be stored in i since it is an int. In such a case the float is demoted to an int and then its value is
+stored. Hence what gets stored in i is 3. Exactly opposite happens in the next statement. Here, 30 is promoted to 30.000000 and then stored in b, since b being a float variable cannot hold anything
+except a float value.
+
+*Hierarchy of Operations :--
+
+Now a few tips about usage of operators in general.:--
+
+(a)Within parentheses the same hierarchy as mentioned in is operative. Also, if there are more than one set of  parentheses, the operations within the innermost parentheses  would 
+be performed first, followed by the operations within the second innermost pair and so on.
+
+(b)We must always remember to use pairs of parentheses. A careless imbalance of the right and left parentheses is a common error. Best way to avoid this error is to type ( ) and
+then type an expression inside it.
+
+
+
+
+Example : Determine the hierarchy of operations and evaluate the following expression:
+kk = 3 / 2 * 4 + 3 / 8 + 3
+Stepwise evaluation of this expression is shown below:
+kk = 3 / 2 * 4 + 3 / 8 + 3
+kk = 1 * 4 + 3 / 8 + 3 operation: /
+kk = 4 + 3 / 8 + 3 operation: *
+kk = 4 + 0 + 3 operation: /
+kk = 4 + 3 operation: +
+kk = 7 operation: +
+
+*Associativity of Operators :--
+
+When an expression contains two operators of equal priority the tie between them is settled using the associativity of the operators.
+Associativity can be of two types—Left to Right or Right to Left.
+
+#Control Instructions in C
+
+As the name suggests the ‘Control Instructions’ enable us to specify the order in which the various instructions in a program are to be executed by the computer.  In other words the control instructions 
+determine the ‘flow of control’ in a program.
+ There are four types of control instructions in C. They are:
+(a) Sequence Control Instruction
+(b) Selection or Decision Control Instruction
+(c) Repetition or Loop Control Instruction
+(d) Case Control Instruction
+The Sequence control instruction ensures that the instructions are executed in the same order in which they appear in the program.
+
+Decision and Case control instructions allow the computer to take a decision as to which instruction is to be executed next. 
+
+The Loop control instruction helps computer to execute a group of statements repeatedly.
+
+
+
+
+
+.
